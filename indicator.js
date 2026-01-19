@@ -40,6 +40,12 @@ class ResourceMonitorIndicator extends PanelMenu.Button {
 
         // Menu items
         const item = new PopupMenu.PopupMenuItem(_('Open System Monitor'));
+        const icon = new St.Icon({
+            icon_name: 'utilities-system-monitor-symbolic',
+            style_class: 'popup-menu-icon'
+        });
+        item.insert_child_at_index(icon, 0);
+
         item.connect('activate', () => {
             try {
                 GLib.spawn_command_line_async('gnome-system-monitor');
@@ -48,6 +54,9 @@ class ResourceMonitorIndicator extends PanelMenu.Button {
             }
         });
         this.menu.addMenuItem(item);
+
+        // Enhance menu width
+        this.menu.actor.add_style_class_name('resource-monitor-menu');
         
         // Initial update
         this._update();

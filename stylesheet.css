@@ -3,6 +3,10 @@
     spacing: 3px;
 }
 
+.resource-monitor-menu {
+    min-width: 300px;
+}
+
 .resource-monitor-item {
     spacing: 0.5px;
 }
