@@ -21,22 +21,19 @@ class ResourceMonitorIndicator extends PanelMenu.Button {
              style_class: 'panel-status-menu-box resource-monitor-box',
         });
         
-        // Add spacing manually since CSS property might be unsupported
-        this._layout.set_style('spacing: 3px;');
-        
         // CPU
-        this._cpuItem = this._createItem('computer-chip-symbolic', '#ffffff', 50);
+        this._cpuItem = this._createItem('computer-chip-symbolic', 50);
         this._layout.add_child(this._cpuItem.box);
 
         // RAM
-        this._ramItem = this._createItem('ssd-symbolic', '#ffffff', 50);
+        this._ramItem = this._createItem('ssd-symbolic', 50);
         this._layout.add_child(this._ramItem.box);
 
         // Network
-        this._downItem = this._createItem('arrow4-down-symbolic', '#ffffff', 68);
+        this._downItem = this._createItem('arrow4-down-symbolic', 68);
         this._layout.add_child(this._downItem.box);
         
-        this._upItem = this._createItem('arrow4-up-symbolic', '#ffffff', 68);
+        this._upItem = this._createItem('arrow4-up-symbolic', 68);
         this._layout.add_child(this._upItem.box);
 
         this.add_child(this._layout);
@@ -69,10 +66,8 @@ class ResourceMonitorIndicator extends PanelMenu.Button {
         });
     }
 
-    _createItem(iconName, color, width) {
+    _createItem(iconName, width) {
         let box = new St.BoxLayout({ style_class: 'resource-monitor-item' });
-        // Add spacing manually since CSS property might be unsupported
-        box.set_style('spacing: 0.5px;');
         
         // Use gicon for custom/file icon support
         let icon = new St.Icon({
@@ -80,9 +75,6 @@ class ResourceMonitorIndicator extends PanelMenu.Button {
             style_class: 'system-status-icon',
             icon_size: 16
         });
-        if (color) {
-            icon.set_style(`color: ${color};`);
-        }
         let label = new St.Label({
             text: '...',
             y_align: Clutter.ActorAlign.CENTER,
