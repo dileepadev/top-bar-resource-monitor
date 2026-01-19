@@ -1,8 +1,12 @@
-# Top‑Bar Resource Monitor
+# Resource Monitor
 
 Shows the real‑time usage in the GNOME top bar like CPU, RAM, network (download/upload), etc.
 
-Metadata
+## Screenshots
+
+![Resource Monitor Screenshot](https://dileepadev.github.io/images/resource-monitor/preview.png)
+
+## Metadata
 
 ```json
 {
@@ -11,7 +15,9 @@ Metadata
   "uuid": "resource-monitor@dileepa.dev",
   "shell-version": [
     "46"
-  ]
+  ],
+  "version": 1,
+  "url": "https://github.com/dileepadev/resource-monitor"
 }
 ```
 
