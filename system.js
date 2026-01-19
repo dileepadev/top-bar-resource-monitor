@@ -41,7 +41,7 @@ export class SystemMonitor {
             return Math.max(0, Math.min(100, usage));
             
         } catch (e) {
-            console.error('TopBarResourceMonitor: Error reading CPU usage', e);
+            console.error('resource-monitor@dileepa.dev: Error reading CPU usage', e);
             return null;
         }
     }
@@ -62,7 +62,7 @@ export class SystemMonitor {
             }
             return null;
         } catch (e) {
-            console.error('TopBarResourceMonitor: Error reading RAM usage', e);
+            console.error('resource-monitor@dileepa.dev: Error reading RAM usage', e);
             return null;
         }
     }
@@ -121,7 +121,7 @@ export class SystemMonitor {
             return { recvRate, sentRate };
 
         } catch (e) {
-            console.error('TopBarResourceMonitor: Error reading network usage', e);
+            console.error('resource-monitor@dileepa.dev: Error reading network usage', e);
             return null;
         }
     }

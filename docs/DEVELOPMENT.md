@@ -3,7 +3,7 @@
 ## Extension ID
 
 ```text
-top-bar-resource-monitor@dileepa.dev
+resource-monitor@dileepa.dev
 ```
 
 ## 0. Installation for Development
@@ -12,7 +12,7 @@ Run this from the repository root to install the extension for development (syml
 
 ```bash
 mkdir -p ~/.local/share/gnome-shell/extensions
-ln -s "$PWD" ~/.local/share/gnome-shell/extensions/top-bar-resource-monitor@dileepa.dev
+ln -s "$PWD" ~/.local/share/gnome-shell/extensions/resource-monitor@dileepa.dev
 ```
 
 ## 1. Confirm the Extension Is Installed
@@ -30,19 +30,19 @@ Ensure your extension appears in the list.
 Enable:
 
 ```bash
-gnome-extensions enable top-bar-resource-monitor@dileepa.dev
+gnome-extensions enable resource-monitor@dileepa.dev
 ```
 
 Disable:
 
 ```bash
-gnome-extensions disable top-bar-resource-monitor@dileepa.dev
+gnome-extensions disable resource-monitor@dileepa.dev
 ```
 
 Uninstall:
 
 ```bash
-gnome-extensions uninstall top-bar-resource-monitor@dileepa.dev
+gnome-extensions uninstall resource-monitor@dileepa.dev
 ```
 
 ## 3. Confirm Extension State
@@ -50,7 +50,7 @@ gnome-extensions uninstall top-bar-resource-monitor@dileepa.dev
 Check detailed status:
 
 ```bash
-gnome-extensions info top-bar-resource-monitor@dileepa.dev
+gnome-extensions info resource-monitor@dileepa.dev
 ```
 
 Expected output:
@@ -129,8 +129,8 @@ journalctl -f -o cat /usr/bin/gnome-shell
 Then reload the extension:
 
 ```bash
-gnome-extensions disable top-bar-resource-monitor@dileepa.dev
-gnome-extensions enable top-bar-resource-monitor@dileepa.dev
+gnome-extensions disable resource-monitor@dileepa.dev
+gnome-extensions enable resource-monitor@dileepa.dev
 ```
 
 ## 7. Logging From Extension Code
@@ -175,11 +175,11 @@ Main.panel.addToStatusArea(
 
 ```bash
 # Edit code
-nano ~/.local/share/gnome-shell/extensions/top-bar-resource-monitor@dileepa.dev/extension.js
+nano ~/.local/share/gnome-shell/extensions/resource-monitor@dileepa.dev/extension.js
 
 # Reload extension
-gnome-extensions disable top-bar-resource-monitor@dileepa.dev
-gnome-extensions enable top-bar-resource-monitor@dileepa.dev
+gnome-extensions disable resource-monitor@dileepa.dev
+gnome-extensions enable resource-monitor@dileepa.dev
 ```
 
 Keep `journalctl` running while developing.
